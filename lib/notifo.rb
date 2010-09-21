@@ -3,7 +3,7 @@ require 'cgi'
 require 'digest/sha1'
 
 class Notifo
-  cattr_accessor :service, :api_key
+  cattr_accessor :username, :secret
   
   include HTTParty
   base_uri 'https://api.notifo.com/v1'
