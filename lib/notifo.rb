@@ -17,9 +17,9 @@ class Notifo
   #   username - notifo service username
   #   apikey - notifo service apisecret
   def initialize(params={})
-    Notifo.service ||= params[:service]
-    Notifo.api_key ||= params[:api_key]
-    @auth = {:username => Notifo.service, :password => Notifo.api_key}
+    Notifo.username ||= params[:username]
+    Notifo.secret ||= params[:secret]
+    @auth = {:username => Notifo.username, :password => Notifo.secret}
   end
 
   # Required Parameters
