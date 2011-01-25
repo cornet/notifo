@@ -1,6 +1,7 @@
 require 'httparty'
 require 'cgi'
 require 'digest/sha1'
+require 'active_support/all'
 
 class Notifo
   cattr_accessor :username, :secret

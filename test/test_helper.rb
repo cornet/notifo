@@ -12,6 +12,6 @@ end
 NOTIFO_USERNAME = 'testing42'
 NOTIFO_API_SECRET = 'x96cb52807a33bafc8fd741eeba5e40ff89f05896'
 
-NOTIFO = Notifo.new NOTIFO_USERNAME, NOTIFO_API_SECRET
+NOTIFO = Notifo.new({:username => NOTIFO_USERNAME, :secret => NOTIFO_API_SECRET})
 
 WEBHOOK = YAML::load(File.read('test/assets/webhook_params.yaml'))

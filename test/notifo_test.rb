@@ -11,7 +11,7 @@ class NotifoTest < Test::Unit::TestCase
     end
 
     should "return false if given the wrong API secret" do
-      bad_notifo = Notifo.new NOTIFO_USERNAME, 'thisisntthesecret'
+      bad_notifo = Notifo.new({:username => NOTIFO_USERNAME, :secret => 'thisisntthesecret'})
       assert !bad_notifo.verify_webhook_signature(WEBHOOK)
     end
   end
