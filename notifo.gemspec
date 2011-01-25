@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/notifo.rb",
-    "notifo-0.1.0.gem",
     "notifo.gemspec",
     "test/assets/webhook_params.yaml",
     "test/notifo_test.rb",
