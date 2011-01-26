@@ -8,7 +8,8 @@ class Notifo
   
   include HTTParty
   base_uri 'https://api.notifo.com/v1'
-
+  format :json
+  
   # Convenience method for configuration
   def Notifo.setup(&block)
     yield self
