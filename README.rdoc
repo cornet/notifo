@@ -9,11 +9,22 @@ A library for using Notifo. Notifo is a way for users to receive mobile notifica
 
     require 'rubygems'
     require 'notifo'
-    notifo = Notifo.new("YOUR_NOTIFO_SERVICE_USERNAME","YOUR_NOTIFO_SERVICE_APISECRET")
-    notifo.subscribe_user("A_NOTIFO_USERNAME")
-    notifo.post("A_SUBSCRIBED_NOTIFO_USERNAME","A MESSAGE")
-    notifo.verify_webhook_signature(post_params_hash)
     
+    notifo = Notifo.new(
+      :username => "YOUR_NOTIFO_SERVICE_USERNAME",
+      :password => "YOUR_NOTIFO_SERVICE_APISECRET"
+    )
+    
+    notifo.subscribe_user(:username => "A_NOTIFO_USERNAME")
+    
+    notifo.send_notification(
+      :username => "A_SUBSCRIBED_NOTIFO_USERNAME",
+      :msg =>"A MESSAGE"
+    )
+    
+    notifo.verify_webhook_signature(:notifo_signature => post_params_hash)
+
+  
 == Note on Patches/Pull Requests
  
 * Fork the project.
